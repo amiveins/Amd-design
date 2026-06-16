@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AMU Design Studio - The Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed-dim": "#c8c6c4",
+                      "surface-container-lowest": "#ffffff",
+                      "error-brick": "#B8635A",
+                      "error-container": "#ffdad6",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed": "#e5e2e1",
+                      "inverse-primary": "#c8c6c4",
+                      "on-secondary": "#ffffff",
+                      "surface-tint": "#5e5e5c",
+                      "surface-container": "#f6ece7",
+                      "glass-mist": "rgba(0, 0, 0, 0.08)",
+                      "glass-edge": "rgba(255, 255, 255, 0.35)",
+                      "carbon-black": "#1A1A1A",
+                      "warm-slate": "#6B6460",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "inverse-surface": "#352f2c",
+                      "secondary-fixed": "#ffdcc6",
+                      "surface-container-high": "#f1e6e1",
+                      "on-primary-container": "#71716f",
+                      "on-background": "#1f1b18",
+                      "on-secondary-fixed": "#301401",
+                      "outline-variant": "#c5c7c1",
+                      "on-secondary-fixed-variant": "#633e24",
+                      "deep-stone": "#1E1B18",
+                      "primary-container": "#f9f7f4",
+                      "primary": "#5e5e5c",
+                      "primary-fixed": "#e4e2df",
+                      "on-error": "#ffffff",
+                      "on-tertiary-container": "#727171",
+                      "on-surface-variant": "#454843",
+                      "secondary": "#7e5539",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "secondary-container": "#ffc9a7",
+                      "surface-dim": "#e2d8d3",
+                      "blush-sand": "#E8D5C4",
+                      "surface-variant": "#ebe0db",
+                      "on-primary-fixed-variant": "#474745",
+                      "tertiary-container": "#faf7f6",
+                      "surface": "#fff8f5",
+                      "ivory-white": "#F9F7F4",
+                      "success-sage": "#7E9171",
+                      "on-surface": "#1f1b18",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "on-tertiary": "#ffffff",
+                      "deep-terracotta": "#A87858",
+                      "secondary-fixed-dim": "#f0bc99",
+                      "surface-container-highest": "#ebe0db",
+                      "outline": "#757873",
+                      "on-error-container": "#93000a",
+                      "surface-bright": "#fff8f5",
+                      "on-primary": "#ffffff",
+                      "surface-container-low": "#fcf2ec",
+                      "tertiary": "#5f5e5e",
+                      "warm-terracotta": "#C09070",
+                      "background": "#fff8f5",
+                      "on-primary-fixed": "#1b1c1a",
+                      "inverse-on-surface": "#f9efe9",
+                      "glass-frost": "rgba(255, 255, 255, 0.18)",
+                      "on-secondary-container": "#7a5337"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-mobile": "64px",
+                      "base": "8px",
+                      "section-desktop": "120px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "max-width": "1280px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "EB Garamond"
+                      ],
+                      "button-text": [
+                              "DM Sans"
+                      ],
+                      "body-main": [
+                              "DM Sans"
+                      ],
+                      "label-eyebrow": [
+                              "DM Sans"
+                      ],
+                      "subheading": [
+                              "DM Sans"
+                      ],
+                      "display-hero": [
+                              "EB Garamond"
+                      ],
+                      "body-large": [
+                              "DM Sans"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "clamp(1.75rem, 1rem + 2.5vw, 3.5rem)",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "button-text": [
+                              "15px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-main": [
+                              "15px",
+                              {
+                                      "lineHeight": "1.75",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "label-eyebrow": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "3px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "subheading": [
+                              "22px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-hero": [
+                              "clamp(2.5rem, 1rem + 5vw, 6rem)",
+                              {
+                                      "lineHeight": "1.1",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "body-large": [
+                              "17px",
+                              {
+                                      "lineHeight": "1.75",
+                                      "fontWeight": "300"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .ease-glass { transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1); }
+        .glass-tier-1 { backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.35); box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 8px 32px rgba(0,0,0,0.08); }
+        .glass-tier-2 { backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.35); box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 4px 16px rgba(0,0,0,0.05); }
+        .magnetic-effect { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+        .magnetic-effect:hover { transform: translateY(-2px); }
+        body { background-color: theme('colors.ivory-white'); color: theme('colors.deep-stone'); }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-glass-frost dark:bg-glass-frost backdrop-blur-md border-b border-glass-edge shadow-mist h-20 transition-all duration-300">
+<div class="flex justify-between items-center px-gutter max-w-max-width mx-auto h-full">
+<a class="font-headline-lg text-headline-lg text-deep-stone dark:text-ivory-white tracking-tight hover:opacity-80 transition-all duration-300 ease-glass scale-95 duration-200" href="#">
+                AMU DESIGN STUDIO
+            </a>
+<div class="hidden md:flex items-center gap-8 font-body-main text-body-main">
+<a class="text-warm-slate hover:text-deep-stone transition-all duration-300 ease-glass" href="#">Home</a>
+<a class="text-warm-slate hover:text-deep-stone transition-all duration-300 ease-glass" href="#">About</a>
+<a class="text-warm-slate hover:text-deep-stone transition-all duration-300 ease-glass" href="#">Services</a>
+<a class="text-warm-slate hover:text-deep-stone transition-all duration-300 ease-glass" href="#">Portfolio</a>
+<a class="text-warm-terracotta border-b-2 border-warm-terracotta pb-1 transition-all duration-300 ease-glass" href="#">Studio</a>
+<a class="text-warm-slate hover:text-deep-stone transition-all duration-300 ease-glass" href="#">Blog</a>
+<a class="text-warm-slate hover:text-deep-stone transition-all duration-300 ease-glass" href="#">Contact</a>
+</div>
+<a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-warm-terracotta text-ivory-white font-button-text text-button-text rounded hover:bg-deep-terracotta transition-colors duration-300 magnetic-effect" href="#">
+                Get Free Quote
+            </a>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-deep-stone flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative h-[819px] min-h-[600px] flex items-center justify-center w-full overflow-hidden">
+<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="A sophisticated interior design workshop seen through a soft, bright, slightly diffused lens. High-end carpentry tools, raw pale woods, and architectural blueprints rest on a large drafting table. The lighting is warm and natural, casting long, elegant shadows typical of a light-mode editorial aesthetic. Hints of deep stone and terracotta colors accent the otherwise neutral, minimalist space." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdGQH7mMHnkvWUckQVbe4yryof2OWfFDLayRJHsGci3YkE5jrdv7EiOiP-D6Y7J7JQPILsIVYz3dljF5RGcl64cvTfvV-U1_-nwpU2TL9R2S8w-nkEy2n56n5gJbcso_GB-GprxnxorP5ESlvrlT2qMa4UTFCa6mW87kEGRmHpr4SlCc-G189oF_CjlD0Ba6x2Gwzpq7uRbU_vsN6W19lJsoLv0P8tCIopoIinXy2Cld_lBYfl3SpT9IZoOuvpmwyujl8uvqG6_ig');">
+<div class="absolute inset-0 bg-ivory-white/40 backdrop-blur-sm mix-blend-overlay"></div>
+</div>
+<div class="relative z-10 text-center px-gutter max-w-4xl mx-auto glass-tier-1 rounded-2xl p-12 bg-ivory-white/60">
+<h1 class="font-display-hero text-display-hero text-deep-stone" style="font-family: 'Cormorant Garamond', serif; font-style: italic;">
+                    THE STUDIO.
+                </h1>
+<p class="mt-6 font-subheading text-subheading text-warm-slate max-w-2xl mx-auto">
+                    Where raw materials meet refined vision. An intimate look into our atelier of craftsmanship and architectural intent.
+                </p>
+</div>
+</section>
+<!-- Studio Story -->
+<section class="py-section-desktop px-gutter max-w-max-width mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<span class="font-label-eyebrow text-label-eyebrow text-warm-terracotta uppercase tracking-widest block mb-4">Our Philosophy</span>
+<h2 class="font-headline-lg text-headline-lg text-deep-stone mb-6">Crafting Spaces with Intentional Stillness.</h2>
+<div class="font-body-main text-body-main text-warm-slate space-y-4">
+<p>At AMU Design Studio, we believe that true luxury lies in restraint and the careful selection of materials. Our studio is not just a workspace; it is an environment designed to foster creativity and precision.</p>
+<p>We blend the intellectual weight of classic design principles with the light, organic touch of modern living. Every joint, every texture, and every shadow is considered.</p>
+</div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2">
+<div class="glass-tier-1 rounded-2xl overflow-hidden aspect-video relative group">
+<!-- Placeholder for video -->
+<div class="absolute inset-0 bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-warm-slate" style="font-size: 48px;">play_circle</span>
+</div>
+<img alt="Studio showcase video thumbnail" class="w-full h-full object-cover opacity-80 mix-blend-multiply group-hover:opacity-100 transition-opacity duration-500" data-alt="A bright, airy interior design studio featuring a large marble island covered in material swatches, architectural models, and fabrics. Natural sunlight streams through floor-to-ceiling windows, illuminating the ivory and warm terracotta accents. The composition is clean, modern, and perfectly aligned with a high-end luxury editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbN7yKcgYi1_1xi9H7kLUNap6rC5DMLJAA--UEO6Q6RNvu52eZrJdITFnN3vqwZ7dTTCWCiY66r7iVYDGGLZlV2ARRT5bzZztQFnyDl2FkdVR6EcNZo3BLjU4eNEhGJi4lxOSBcq6ck0J1_xFJKGxv0UPmQf1gUnPD_FH6tyeHT0emHnKi_24PTr3IT3Z31cr_ed2tLCMn3MgZpQ3qXjYe1P5XZCFYzCA6x1cx9XJsnQXbR3BNsKF4f54Rk-9Uu1F1rvcOLaL-V_s"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Carpentry Unit -->
+<section class="py-section-desktop bg-surface px-gutter">
+<div class="max-w-max-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative group rounded-xl overflow-hidden glass-tier-2 p-2">
+<img alt="Master craftsman working on bespoke joinery" class="w-full h-[600px] object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-[600ms] ease-glass" data-alt="Close-up of a master craftsman meticulously sanding a piece of pale oak wood in a well-lit workshop. Wood shavings curl elegantly on the workbench. The lighting highlights the texture of the wood grain and the craftsman's focused hands. The scene conveys a sense of premium bespoke creation, utilizing a warm, neutral color palette consistent with luxury interiors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB00ENLa6OCRGEO1bIfxop2Y9R_gjii1sQzHKZcccWSagxUljlwzERY6ZqvhSXICVibNcCPuLxvnmMTs_Mzw-g-etIktyh3szTRngDuS0oXusn5gfaEUUCANA_ysffY3zl3DLSLI-pL9peVivrCW9Rh5oEJ-TyklIFGVy_fMh5SN-KXoGv_7cdTEtU2U9wxZZ4adVyT5hJz_psgGgm-UghT9B1rBnK-XrmeVgDizJZctY1hXABfGrguu7fu95vNohsAM1c7E1unrl0"/>
+<div class="absolute bottom-6 left-6 right-6 glass-tier-1 rounded-lg p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-[600ms] ease-glass">
+<p class="font-label-eyebrow text-label-eyebrow text-deep-stone">Bespoke Joinery</p>
+</div>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-label-eyebrow text-label-eyebrow text-warm-terracotta uppercase tracking-widest block mb-4">The Atelier</span>
+<h3 class="font-headline-lg text-headline-lg text-deep-stone mb-6">Master Carpentry</h3>
+<p class="font-body-large text-body-large text-warm-slate mb-8">
+                        Our dedicated carpentry unit is the heartbeat of our bespoke offerings. Here, master craftsmen transform raw timber into seamless architectural elements. We focus on traditional joinery techniques paired with modern precision, ensuring every custom piece—from monumental dining tables to intricate cabinetry—carries the weight of true artisanship.
+                    </p>
+<a class="inline-flex items-center gap-2 font-button-text text-button-text text-deep-stone hover:text-warm-terracotta transition-colors duration-300 w-fit group" href="#">
+                        Explore Our Materials
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" style="font-size: 20px;">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Modular Furniture Unit -->
+<section class="py-section-desktop px-gutter">
+<div class="max-w-max-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="flex flex-col justify-center order-2 md:order-1">
+<span class="font-label-eyebrow text-label-eyebrow text-warm-terracotta uppercase tracking-widest block mb-4">Precision Engine</span>
+<h3 class="font-headline-lg text-headline-lg text-deep-stone mb-6">Modular Manufacturing</h3>
+<p class="font-body-large text-body-large text-warm-slate mb-8">
+                        Complementing our bespoke carpentry is our advanced modular manufacturing wing. Utilizing state-of-the-art machinery, we produce scalable, precision-engineered furniture solutions. This allows us to deliver complex, multi-room fit-outs with uncompromised quality and exact tolerances, perfectly marrying high-volume capability with studio-level refinement.
+                    </p>
+<a class="inline-flex items-center gap-2 font-button-text text-button-text text-deep-stone hover:text-warm-terracotta transition-colors duration-300 w-fit group" href="#">
+                        View Technical Specs
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" style="font-size: 20px;">arrow_right_alt</span>
+</a>
+</div>
+<div class="relative group rounded-xl overflow-hidden glass-tier-2 p-2 order-1 md:order-2">
+<img alt="Precision modular furniture manufacturing" class="w-full h-[600px] object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-[600ms] ease-glass" data-alt="A clean, modern manufacturing facility focused on high-end interior components. Minimalist, precision-cut modular furniture pieces in ivory and light ash are stacked neatly. High-tech cutting machinery sits in the background, subtly blurred. The environment is orderly, bright, and sterile yet infused with a warm, editorial tonality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIe_IOmt0Nfkf0NsjdHInF8tAHhibLoLeahQhPywxRrCUohIICqXZzkE3KZwpcr4tiKrwTJI9qP8TCxkP34ZiscPvdnGl0GWEKofEnqKPX8OWaeIdE37NxUDvhLpjj_j7qIE94gpJ0J8l82sZkRivbQrFicFls-Mc_L9lm_WdPkxWDDN9-3UXJZ_uQFEt7TvWUNOryes82cOH9dmKKyQLvV5hiK6mZarQhHS0m0DLj1yHRTX6sqUKyKb0WzEoflztbIzJ2vvv_L8k"/>
+</div>
+</div>
+</section>
+<!-- Process in Action (Bento Grid) -->
+<section class="py-section-desktop bg-surface-container-low px-gutter">
+<div class="max-w-max-width mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-deep-stone">Process in Action</h2>
+<p class="mt-4 font-body-main text-body-main text-warm-slate">From raw vision to tangible reality.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+<!-- Large Feature Cell -->
+<div class="md:col-span-2 md:row-span-2 rounded-xl overflow-hidden relative group glass-tier-2 p-1">
+<img alt="Design drafting process" class="w-full h-full object-cover rounded-lg" data-alt="A top-down view of a pristine, white architectural drafting table. Hand-drawn sketches of elegant furniture are layered over material swatches—terracotta fabrics, pale stone samples, and brass fittings. A delicate cup of black coffee rests near the edge. The lighting is diffused and professional, emphasizing the thoughtful, tactile design process." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnfaaO_Ku2RYXbb6NN2awdvcMmOikZx_WMFWRIMIelUMtON2QQuBFHL6TEjhldRSHGwGg3Mz0YUgN10i7z9OKyZQ8qoMaWrLHxUjOHmYCW9n2csSBgtqkku8_hMbA3rbSKYkod8FgLT45L-ixl5uUKmJEIThEcCRCDwkHFRzsy3EQaPmtAf0lTGH9VPDGT3Zf21CFDJzWX6NOX0IKOVnTmaZtoDfwi1L8E7cAK3nMiKDTO0npdUImFJVI3WEUagGSyk4OsrS6FQ6s"/>
+</div>
+<!-- Small Cell 1 -->
+<div class="rounded-xl overflow-hidden relative group glass-tier-2 p-1">
+<img alt="Material selection" class="w-full h-full object-cover rounded-lg" data-alt="Close-up of a designer's hand selecting from a refined palette of interior materials. The focus is on tactile textures: smooth ivory ceramics, ribbed warm slate wood, and matte carbon black metal. The composition is tight, minimalist, and bathed in soft, natural light, reflecting a luxury editorial mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNokrnW2hwhBQ-fdK5Rl8cnoLgACTIgIznFO4MA0MDyGd-Y1VwKX6uVNR54455kzhc-fmvsHQyoHOiv5g-3ZpLETKmsMVRJwifa3KzJ4XmcDV9KPHBaSrGoOlny2bDnvEYAbe6PjQPTTqRJrrOtVrySH01qyDCoPAwvPgrjOtMoR3HS55PHCQo06m-6rDQYwYnJDKubHnWw5_jSyZiI5nbTU-50x6Hgwr58s45TygUdWiCoR_wKyqU8fecYEOHuPlupmFEyHbEuaU"/>
+</div>
+<!-- Small Cell 2 -->
+<div class="rounded-xl overflow-hidden relative group glass-tier-2 p-1">
+<img alt="Final polished interior detail" class="w-full h-full object-cover rounded-lg" data-alt="A beautifully finished, modern minimalist interior detail. A bespoke, floating wooden console table sits against an ivory white wall. A single sculptural ceramic vase in warm terracotta rests on top. The play of light and shadow creates a profound sense of 'intentional stillness' and architectural depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5J4D1ZCsfSZVE2IP7rJls0d7SFNVHLsIyFXo1If425UpMkcnqbm3ti-alEgq44YgK9G0KEtb_v1ebpwtTliXgW_qR57-9S0N6PbvdvNecA8idkT95GQjQjAQBLEwmEEKSulmNHL8Z6ZsgYTkFDab7oJ8d5qd38WciAMPOn9bZ_G3pM7rdGibJRHKeUFYXW4MW06PKOVadtBD0bPlUIQPB02VsqNWzs7_cT_Op_HkvAoMSMbmFt13qttVJpb9jTKzNRMOGRSk_Ewg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-gutter text-center">
+<h2 class="font-headline-lg text-headline-lg text-deep-stone mb-8 max-w-2xl mx-auto">Ready to shape your space?</h2>
+<a class="inline-flex items-center justify-center px-8 py-4 bg-warm-terracotta text-ivory-white font-button-text text-button-text text-lg rounded hover:bg-deep-terracotta transition-colors duration-300 magnetic-effect shadow-mist" href="#">
+                Visit Us / Book a Consultation
+            </a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-desktop bg-deep-stone dark:bg-black text-ivory-white dark:text-primary-fixed no-border flat opacity-90 hover:opacity-100 transition-colors duration-300">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter max-w-max-width mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-lg text-headline-lg text-ivory-white mb-6">AMU DESIGN STUDIO</div>
+<p class="font-body-main text-body-main text-primary-fixed-dim max-w-sm">
+                    Crafting intentional spaces through editorial minimalism and architectural depth.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-eyebrow text-label-eyebrow text-warm-slate uppercase">Navigation</span>
+<a class="font-body-main text-body-main text-primary-fixed-dim hover:text-ivory-white transition-colors duration-300" href="#">Info</a>
+<a class="font-body-main text-body-main text-primary-fixed-dim hover:text-ivory-white transition-colors duration-300" href="#">Projects</a>
+<a class="font-body-main text-body-main text-ivory-white font-bold transition-colors duration-300" href="#">Studio</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-eyebrow text-label-eyebrow text-warm-slate uppercase">Connect</span>
+<a class="font-body-main text-body-main text-primary-fixed-dim hover:text-ivory-white transition-colors duration-300" href="#">Socials</a>
+</div>
+<div class="col-span-1 md:col-span-4 mt-12 pt-8 border-t border-warm-slate/30">
+<p class="font-body-main text-body-main text-primary-fixed-dim text-sm">
+                    © 2024 AMU Design Studio. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 rounded-full w-auto min-w-[320px] bg-glass-frost dark:bg-glass-mist backdrop-blur-lg border border-glass-edge shadow-lg flex justify-around items-center p-2 z-50 transition-all magnetic-effect active:scale-90">
+<a class="text-deep-stone dark:text-ivory-white px-4 py-2 flex items-center gap-2 font-label-eyebrow text-label-eyebrow hover:bg-glass-edge transition-all rounded-full" href="#">
+<span class="material-symbols-outlined" style="font-size: 20px;">chat</span>
+<span>WhatsApp</span>
+</a>
+<a class="text-deep-stone dark:text-ivory-white px-4 py-2 flex items-center gap-2 font-label-eyebrow text-label-eyebrow hover:bg-glass-edge transition-all rounded-full" href="#">
+<span class="material-symbols-outlined" style="font-size: 20px;">call</span>
+<span>Call</span>
+</a>
+<a class="bg-warm-terracotta text-ivory-white rounded-full px-6 py-2 flex items-center gap-2 font-label-eyebrow text-label-eyebrow" href="#">
+<span class="material-symbols-outlined" style="font-size: 20px;">request_quote</span>
+<span>Quote</span>
+</a>
+</nav>
+</body></html>
